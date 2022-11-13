@@ -19,7 +19,7 @@ For database - SqlServer
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "TestConnectionStrings": "Server=server_name; Database=databse_name; Trusted_Connection= true"
+    "TestConnectionStrings": "Server=server_name; Database=databse_name; Trusted_Connection= true; TrustServerCertificate=True"
   }
 }
 2. Go to program.cs class and add DbContext (AddDbContext<your_dbcontext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("TestConnectionStrings"))))
